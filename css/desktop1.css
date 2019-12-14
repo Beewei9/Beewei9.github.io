@@ -1,0 +1,484 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face {
+  font-family: "HanaMinOT_otf";
+  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: "HanaMinOT_woff";
+  src: url(//letsohyeah.github.io/HanaMinOTPr6N-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: "HanaMinA_ttf";
+  src: url(//letsohyeah.github.io/HanaMinA.ttf) format('truetype');
+}
+a:link{color:#474849}
+a:active {color:#474849;}
+a:visited {color:#474849;}
+a{text-decoration:none}
+button{
+  border: none;
+  background: none;
+  text-align: left;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+* {
+       -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+#overlay{
+  z-index: 10000;
+}
+.loadingbox{
+  justify-content: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  position: absolute;
+  background-color: #474849;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+.cleanfix{
+  width: 100vw;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  background-color: #474849;
+  }
+.leftbox{
+  border-radius: 2rem;
+  height: 100vh;
+  width: 61.3vh;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-directio: column;
+  -webkit-flex-direction: column;
+     flex-direction: column;
+}
+.rightbox{
+  border-radius: 2rem;
+  border-left: 1px solid #474849;
+  background-color: #e2ded7;
+  height: 100vh;
+  width: calc(100vw - 61.3vh);
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-directio: column:
+  -webkit-flex-direction: column;
+     flex-direction: column;
+}
+#topbox{
+  transition: 0.4s;
+  height: calc(100vh - 61.3vh);
+  width: 100%;
+  border-radius: 2rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+#logobox{
+  min-width:  calc(100vh - 61.3vh);
+  height: 100%;
+  border: 1px solid #474849;
+  background-color: #e2ded7;
+  border-radius: 2rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbox{
+  transition: 0.4s;
+  width: 100%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-directio: column:
+  -webkit-flex-direction: column;
+     flex-direction: column;
+}
+#nav{
+  height: calc(61.3vh - 38.7vh);
+  padding: 2rem;
+  border-bottom: 1px solid #474849;
+  border-radius: 2rem;
+  background-color: #e2ded7;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.1rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  -moz-flex-directio: column:
+  -webkit-flex-direction: column;
+     flex-direction: column;
+  justify-content: center;
+}
+#titlebox{
+  transition: 0.4s;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  height: calc(38.7vh - 22.6vh);
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #474849;
+  background-color: #e2ded7;
+  border-radius: 2rem;
+}
+.titlebar{
+  width: 8rem;
+  height: 2rem;
+  position: absolute;
+  background-color: #e2ded7;
+  transform: scaleX(0)
+}
+.move-title{
+  animation: 0.5s move-title ease-in-out ;
+  transform-origin: right center;
+}
+@keyframes move-title {
+  0% { transform: scaleX(0) }
+  35% { transform: scaleX(1) }
+  65% { transform: scaleX(1) }
+  100% { transform: scaleX(0) }
+}
+.textA , .textW , .textC{
+  display: none;
+}
+.textA.showtitle{
+  display: flex;
+}
+.textW.showtitle{
+  display: flex;
+}
+.textC.showtitle{
+  display: flex;
+}
+
+/*About*/
+#infobox-about{
+  padding: 3rem;
+  position: absolute;
+  height: calc(100vh - 38.7vh);
+  width: 61.3vh;
+  bottom: 0;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2rem;
+  background-color: #e2ded7;
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+#infobox-about.view{
+  transform: translateY(0%);
+  z-index: 100;
+}
+.rightbox.about{
+  overflow: scroll;
+  right: 0;
+  position: absolute;
+  padding: 5rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.rightbox.about.view{
+  transform: translateX(0);
+  z-index: 1000;
+}
+.titlebox-skills{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 4rem;
+}
+.skillsgrid{
+  width: 100%;
+  margin-bottom: 4rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.skillsbox{
+  width: 100%;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+}
+.skillstitle{
+  margin-left: 4rem;
+  text-align: right;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+.typebox{
+  width: 100%;
+  margin-bottom: 1.2rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+}
+.bar{
+  margin-right: 0.3rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 1.2rem;
+  background-color: #474849;
+  border-radius: 0.4rem;
+}
+.move{
+  animation: 1.8s move ease-in-out ;
+  transform-origin:left center;
+}
+@keyframes move {
+  0% { transform: scaleX(0)}
+  20%	{ transform: scaleX(0)}
+  65% { transform: scaleX(80%) }
+  100% { transform: scaleX(100%) }
+}
+.barbox{
+  width: 100%;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction:  row;
+  line-height: 2.1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0rem;
+}
+.name-about{
+  line-height: 0.8rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.en-name{
+  line-height: 2.1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+}
+.subcontent-about{
+  color: #555;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+}
+.content-about{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+/*About*/
+
+
+/*WORKS*/
+#infobox-works{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: scroll;
+  position: absolute;
+  height: calc(100vh - 38.7vh);
+  width: 61.3vh;
+  bottom: 0;
+  border-radius: 2rem;
+  background-color: #e2ded7;
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+#infobox-works.view{
+  transform: translateY(0%);
+  z-index: 100;
+}
+.rightbox.works{
+  overflow: scroll;
+  right: 0;
+  position: absolute;
+  padding: 5rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+.rightbox.works.view{
+  transform: translateX(0);
+  z-index : 100;
+}
+.item{
+  padding: 0.5rem;
+  width: calc(50% - 1rem);
+}
+.imgbox-works{
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  border-radius: 1rem;
+}
+.imgbox1-works{
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.name-works{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  display: table;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.date-works{
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  text-align: right;
+  font-size: 0.65rem;
+  font-weight: 300;
+  line-height: 1rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.15rem;
+  color: #474849;
+}
+.titlebox-works{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  width: 100%;
+  text-align: right;
+}
+/*WORKS*/
+
+
+
+/*CONTACT*/
+#infobox-contact{
+  position: absolute;
+  height: calc(100vh - 38.7vh);
+  width: 61.3vh;
+  bottom: 0;
+  padding: 3rem;
+  border-radius: 2rem;
+  background-color: #e2ded7;
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Noto Sans TC', sans-serif;
+  justify-content: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: 0.3s ease-in-out;
+  z-index: 1;
+}
+#infobox-contact.view{
+  transform: translateY(0%);
+  z-index: 100;
+}
+/*CONTACT*/
+.linebox{
+  margin-right: 2rem;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: 				 flex;
+}
+.line1{
+  transform: rotate(10deg);
+  border-radius: 1rem;
+  height: 2.5rem;
+  width: 0.7rem;
+  background-color: #e2ded7;
+  animation: 2s line ease-in-out ;
+}
+.line2{
+  margin-left: 0.6rem;
+  transform: rotate(10deg);
+  border-radius: 1rem;
+  height: 4.2rem;
+  width: 0.7rem;
+  background-color: #e2ded7;
+  animation: 2s line1 ease-in-out ;
+}
+.line3{
+  align-self: flex-end;
+  margin-left: 0.6rem;
+  transform: rotate(10deg);
+  border-radius: 1rem;
+  height: 2.5rem;
+  width: 0.7rem;
+  background-color: #e2ded7;
+  animation: 2s line ease-in-out ;
+}
+@keyframes line {
+  0% { transform: rotate(0deg)}
+  0% { height: 4.2rem}
+  50% { height: 2.5rem}
+  70% { transform: rotate(10deg)}
+}
+@keyframes line1 {
+  0% { transform: rotate(0deg)}
+  70% { transform: rotate(10deg)}
+}
