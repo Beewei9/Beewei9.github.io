@@ -2600,7 +2600,7 @@ flex-direction: column;
 	display: 				 flex;
 }
 .lefrtitlebox{
-	color: #fff
+	color: #fff;
 	margin-left: 1rem;
 	margin-top: 1rem;
 	display: -moz-flex;
